@@ -3,7 +3,6 @@
     padding-left: 50px;
     float: right;
 }
-/* end navbar section */
 
 /* input section */
 label{
@@ -20,7 +19,6 @@ form > h5{
 .train{
     float: right;
 }
-/* end input section */
 
 /* result section */
 .card-body > h5{
@@ -38,7 +36,7 @@ form > h5{
     margin-left: 20px;
     float: right;
 }
-/* end result section */
+
 /* testing section */
 .testing > h5, label{
     font-size: small;
@@ -46,7 +44,7 @@ form > h5{
 .test_btn{
     float: right;
 }
-/* end testing section */
+
 .parameter > h5{
     font-size: medium;
 }
