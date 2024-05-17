@@ -35,7 +35,7 @@ class App:
 
         # UnderSampling
         # rus = RandomUnderSampler(random_state=42)
-        # data, label = rus.fit_resample(data_train, label_train)
+        # data, label = rus.fit_resample(data, label)
         
         data = data.values.round(3).tolist()
         label = label.values.tolist()
@@ -45,7 +45,7 @@ class App:
                 labels.append(label[i][j])
 
         # split data
-        data_train, data_test, label_train, label_test = train_test_split(data, label, test_size = 0.2)
+        data_train, data_test, label_train, label_test = train_test_split(data, label, test_size = 0.3)
         
         # Normalisasi
         scaler = MinMaxScaler()

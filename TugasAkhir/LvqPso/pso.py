@@ -25,7 +25,7 @@ class PSO:
         return position
 
     # Optimasi mencari nilai cost data
-    def costData(self, row_data, row_particle, data, particle, label):
+    def hitungCost(self, row_data, row_particle, data, particle, label):
         sqrt_value = []
         # rumus menghitung jarak minimal
         for i in range(row_particle):
@@ -128,7 +128,7 @@ class PSO:
     def train_pso(self, data, label, row_data, maxIteration, row_particle, w, c1, c2):
         particle = self.initPartikel(self, row_particle)
         velocity = self.initV(self, row_particle)
-        cost = self.costData(self, row_data, row_particle, data, particle, label)
+        cost = self.hitungCost(self, row_data, row_particle, data, particle, label)
         fitness = self.calculateFitness(self, cost, row_data)
         pbest = self.initialPBest(self, particle)
         gbest, gbest_fitness = self.setGBest(self, pbest, fitness)
@@ -136,7 +136,7 @@ class PSO:
         while iteration < maxIteration:
             velocity = self.updateVelocity(self, w, c1, c2, particle, pbest, gbest, velocity)
             particle = self.updatePosition(self, particle, velocity)
-            cost = self.costData(self, row_data, row_particle, data, particle, label)
+            cost = self.hitungCost(self, row_data, row_particle, data, particle, label)
             old_fitness = fitness
             fitness = self.calculateFitness(self, cost, row_data)
             pbest = self.updatePBest(self, old_fitness, fitness, pbest, particle)

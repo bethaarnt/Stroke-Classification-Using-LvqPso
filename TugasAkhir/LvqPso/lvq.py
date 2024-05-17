@@ -15,7 +15,7 @@ class LVQ:
         labelTrain = labelTrain.tolist()
         weight = weight.tolist()
         return weight, weight_label, dataTrain, labelTrain
-
+            
     # Menghitung jarak euclidean
     def euclideanLVQ(self, row_data, row_weight, column_data, data, weight, label, alpha):
         updatedWeight = weight

@@ -111,8 +111,19 @@
                                     <div class="col-sm-5">
                                         <label for="koefisien_c1" class="form-label">Koefisien C1</label>
                                     </div>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control h-75" id="koefisien_c1" name="koefisien_c1" {% if koefisien_c1 %} value="{{ koefisien_c1 }}" {% endif %} required>
+                                    <div class="col-sm-7" style="display: flex; align-items: center; gap: 20px;">
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="koefisien_c1_0.5" name="koefisien_c1" value="0.5" {% if koefisien_c1 == 0.5 %} checked {% endif %}>
+                                            <label class="form-check-label" for="koefisien_c1_0.5">0,5</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="koefisien_c1_1.0" name="koefisien_c1" value="1.0" {% if koefisien_c1 == 1.0 %} checked {% endif %}>
+                                            <label class="form-check-label" for="koefisien_c1_1.0">1,0</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="koefisien_c1_1.5" name="koefisien_c1" value="1.5" {% if koefisien_c1 == 1.5 %} checked {% endif %}>
+                                            <label class="form-check-label" for="koefisien_c1_1.5">1,5</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -124,8 +135,18 @@
                                     <div class="col-sm-5">
                                         <label for="koefisien_c2" class="form-label">Koefisien C2</label>
                                     </div>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control h-75" id="koefisien_c2" name="koefisien_c2" {% if koefisien_c2 %} value="{{ koefisien_c2 }}" {% endif %} required>
+                                    <div class="col-sm-7" style="display: flex; align-items: center; gap: 20px;">
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="koefisien_c2_0.5" name="koefisien_c2" value="0.5" {% if koefisien_c2 == 0.5 %} checked {% endif %}>
+                                            <label class="form-check-label" for="koefisien_c2_0.5">0,5</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" id="koefisien_c2_1.0" name="koefisien_c2" value="1.0" {% if koefisien_c2 == 1.0 %} checked {% endif %}>
+                                            <label class="form-check-label" for="koefisien_c2_1.0">1,0</label>
+                                        </div><div class="form-check">
+                                            <input type="radio" class="form-check-input" id="koefisien_c2_1.5" name="koefisien_c2" value="1.5" {% if koefisien_c2 == 1.5 %} checked {% endif %}>
+                                            <label class="form-check-label" for="koefisien_c2_1.5">1,5</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
